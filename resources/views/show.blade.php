@@ -10,7 +10,7 @@
 <body dir="rtl">
   <!-- component -->
   <div class="min-h-screen p-6 bg-gray-100 flex flex-col items-center justify-center">
-    <a href="{{ route("home") }}" class="md:absolute top-0 right-0 p-5 float-right">
+    <a href="{{ route('home') }}" class="md:absolute top-0 right-0 p-5 float-right">
       <img src="{{ asset('moy.jpeg') }}" alt="Moy Logo"
         class="scale-110 transition-all rounded-full w-14 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white">
     </a>
