@@ -13,17 +13,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>طلب جديد</title>
+  <title>جدول الطلبات</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet"> -->
-  <!-- <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet"> -->
-  <link href="https://cdn.datatables.net/v/dt/dt-1.13.6/r-2.5.0/datatables.min.css" rel="stylesheet">
- 
-
-  <style>
-    .dataTables_wrapper .dataTables_filter input,.dataTables_wrapper select{color:#4a5568;padding:.5rem 1rem;line-height:1.25;border-width:2px;border-radius:.25rem;border-color:#edf2f7;background-color:#edf2f7}table.dataTable.display tbody tr:hover,table.dataTable.hover tbody tr:hover{background-color:#ebf4ff}.dataTables_wrapper .dataTables_paginate .paginate_button{font-weight:700;border-radius:.25rem;border:1px solid transparent}.dataTables_wrapper .dataTables_paginate .paginate_button.current,.dataTables_wrapper .dataTables_paginate .paginate_button:hover{color:#fff!important;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);font-weight:700;border-radius:.25rem;background:#667eea!important;border:1px solid transparent}table.dataTable.no-footer{border-bottom:1px solid #e2e8f0;margin-top:.75em;margin-bottom:.75em}table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before{background-color:#667eea!important}
-  </style>
-
+  <link rel="stylesheet" href="{{ asset("Datatable/datatables.min.css") }}">
+  <link rel="stylesheet" href="{{ asset("Datatable/DataTables-1.13.6/css/jquery.dataTables.min.css") }}">
+  <link rel="stylesheet" href="{{ asset("Datatable/Responsive-2.5.0/css/responsive.dataTables.min.css") }}">
+  <link rel="stylesheet" href="{{ asset("style.css") }}">
 </head>
 
 <body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
@@ -95,25 +90,19 @@
 
     </div>
 
-
-
-
-
 	<!-- jQuery -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.datatables.net/v/dt/dt-1.13.6/r-2.5.0/datatables.min.js"></script>
-
-	<!--Datatables -->
-    <!-- <script src="{{ asset('jquery.dataTables.js') }}"></script> -->
-	<!-- <script src="{{ asset('dataTables.responsive.min.js') }}"></script> -->
+	<script type="text/javascript" src="{{ asset("jquery-3.4.1.min.js") }}"></script>
+    <script src="{{ asset("Datatable/datatables.min.js") }}"></script>
+    <script src="{{ asset("Datatable/DataTables-1.13.6/js/jquery.dataTables.min.js") }}"></script>
+    <script src="{{ asset("Datatable/Responsive-2.5.0/js/responsive.dataTables.min.js") }}"></script>
 	<script>
 		$(document).ready(function() {
 
-
-
-            $("#example").DataTable({responsive: true}).columns.adjust().responsive.recalc();
-
-                $("#example_filter label input").addClass("text-right");
+			var table = $('#example').DataTable({
+					responsive: true
+				})
+				.columns.adjust()
+				.responsive.recalc();
 		});
 	</script>
 
