@@ -42,7 +42,7 @@
 					<tr>
 						<th data-priority="1">#</th>
 						<th data-priority="2">الاسم</th>
-						<th data-priority="3">المبلغ</th>
+						<th data-priority="3">مبلغ السلفة المطلوب</th>
 						<th data-priority="4">مدة التسديد</th>
                         <th data-priority="5">الرقم التسلسلي</th>
 						<th data-priority="6">تاريخ الطلب</th>
