@@ -13,7 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>طلب جديد</title>
+  <title>جدول الطلبات</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="{{ asset("Datatable/datatables.min.css") }}">
   <link rel="stylesheet" href="{{ asset("Datatable/DataTables-1.13.6/css/jquery.dataTables.min.css") }}">
