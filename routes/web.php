@@ -30,6 +30,7 @@ Route::middleware("guest")->group(function () {
 
 Route::middleware(["auth"])->group(function () {
     Route::get("/admin", [OrderController::class, "index"])->name("admin");
+    Route::get("/done", [OrderController::class, "done"])->name("done");
     Route::put("/update/{id}", [OrderController::class, "update"])->name("update");
     Route::get("/logout", [UserController::class, "logout"])->name("logout");
 });

@@ -125,7 +125,6 @@
                                 <th data-priority="5">الرقم التسلسلي</th>
                                 <th data-priority="6">تاريخ الطلب</th>
                                 <th data-priority="7">رقم الهاتف</th>
-                                <th data-priority="8"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -145,10 +144,6 @@
                                         <td>{{ $order->created_at }}</td>
                                         <td><a class="no-underline hover:underline text-blue-500 hover:text-blue-900"
                                                 href="tel:{{ $order->phone }}">{{ $order->phone }}</a></td>
-                                        <td>
-                                            <input type="submit" value="انهاء"
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2" />
-                                        </td>
                                     </form>
                                 </tr>
                             @endforeach

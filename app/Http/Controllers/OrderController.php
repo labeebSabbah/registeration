@@ -44,4 +44,9 @@ class OrderController extends Controller
         return $this->orderRepository->update($id);
     }
 
+    public function done()
+    {
+        return $this->orderRepository->done();
+    }
+
 }

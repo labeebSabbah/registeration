@@ -28,6 +28,7 @@ class StoreOrderRequest extends FormRequest
             'name' => 'required|string|max:255|unique:orders,name',
             'phone' => [
                 'required',
+                'unique:orders,phone',
                 new PhoneRule(),
             ],
             'work_location' => 'required|string|max:255',

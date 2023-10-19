@@ -54,4 +54,10 @@ class OrderRepository implements OrderRepositoryInterface
         return redirect()->route('admin');
     }
 
+    public function done()
+    {
+        $orders = Order::where("completed", true)->get();
+        return view('done', compact('orders'));
+    }
+
 }
