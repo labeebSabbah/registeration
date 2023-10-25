@@ -13,5 +13,6 @@ interface OrderRepositoryInterface
     public function show(Request $request);
     public function search();
     public function update($id);
+    public function busy();
     public function done();
 }

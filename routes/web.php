@@ -16,7 +16,8 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', [OrderController::class, "create"])->name("home");
+// Route::get('/', [OrderController::class, "create"])->name("home");
+Route::get("/", [OrderController::class, "busy"])->name("home");
 Route::post("/store", [OrderController::class, "store"])->name("store");
 Route::post("/show", [OrderController::class, "show"])->name("show");
 Route::get("/search", [OrderController::class, "search"])->name("search");
