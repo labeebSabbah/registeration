@@ -6,9 +6,11 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Repositories\OrderRepository;
 use App\Repositories\UserRepository;
+use App\Repositories\OilRepository;
 
 use App\Interfaces\OrderRepositoryInterface;
 use App\Interfaces\UserRepositoryInterface;
+use App\Interfaces\OilRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,7 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->app->bind(OrderRepositoryInterface::class, OrderRepository::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
+        $this->app->bind(OilRepositoryInterface::class, OilRepository::class);
     }
 
     /**

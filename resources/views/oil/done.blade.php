@@ -35,7 +35,7 @@
                 <ul id="dropdown" style="transition: none;"
                     class="bg-white transition-all rounded-full w-14 shadow-lg ring ring-white p-3 text-center">
                     <li>
-                        <a href="{{ route('admin') }}"
+                        <a href="{{ route('oil') }}"
                             class="no-underline hover:underline text-blue-500 hover:text-blue-900">
                             <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
                                 xml:space="preserve">
@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('done') }}"
+                        <a href="{{ route('oil.done') }}"
                             class="no-underline hover:underline text-blue-500 hover:text-blue-900">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -75,6 +75,21 @@
                                 </g>
                             </svg>
                         </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('orders') }}"
+                            class="no-underline hover:underline text-blue-500 hover:text-blue-900">
+                            <svg fill="#000000" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M12.32 8a3 3 0 0 0-2-.7H5.63A1.59 1.59 0 0 1 4 5.69a2 2 0 0 1 0-.25 1.59 1.59 0 0 1 1.63-1.33h4.62a1.59 1.59 0 0 1 1.57 1.33h1.5a3.08 3.08 0 0 0-3.07-2.83H8.67V.31H7.42v2.3H5.63a3.08 3.08 0 0 0-3.07 2.83 2.09 2.09 0 0 0 0 .25 3.07 3.07 0 0 0 3.07 3.07h4.74A1.59 1.59 0 0 1 12 10.35a1.86 1.86 0 0 1 0 .34 1.59 1.59 0 0 1-1.55 1.24h-4.7a1.59 1.59 0 0 1-1.55-1.24H2.69a3.08 3.08 0 0 0 3.06 2.73h1.67v2.27h1.25v-2.27h1.7a3.08 3.08 0 0 0 3.06-2.73v-.34A3.06 3.06 0 0 0 12.32 8z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                </li>
                     <li>
                         <a href="{{ route('logout') }}"
                             class="no-underline hover:underline text-blue-500 hover:text-blue-900">
@@ -106,8 +121,8 @@
                             <tr>
                                 <th data-priority="1">#</th>
                                 <th data-priority="2">الاسم</th>
-                                <th data-priority="3">مبلغ السلفة المطلوب</th>
-                                <th data-priority="4">مدة التسديد</th>
+                                <th data-priority="3">عدد التنكات المطلوب</th>
+                                <th data-priority="4">مكان التصنيع</th>
                                 <th data-priority="5">الرقم التسلسلي</th>
                                 <th data-priority="6">تاريخ الطلب</th>
                                 <th data-priority="7">رقم الهاتف</th>
@@ -119,13 +134,13 @@
                             @endphp
                             @foreach ($orders as $order)
                                 <tr>
-                                    <form action="{{ route('update', ['id' => $order->id]) }}" method="POST">
+                                    <form action="{{ route('oil.update', ['id' => $order->id]) }}" method="POST">
                                         @csrf
                                         @method('PUT')
                                         <td>{{ $count++ }}</td>
                                         <td>{{ $order->name }}</td>
                                         <td>{{ $order->amount }}</td>
-                                        <td>{{ $order->period }} Months</td>
+                                        <td>{{ $order->location }}</td>
                                         <td>{{ $order->id }}</td>
                                         <td>{{ $order->created_at }}</td>
                                         <td><a class="no-underline hover:underline text-blue-500 hover:text-blue-900"

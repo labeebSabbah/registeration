@@ -9,7 +9,7 @@
 
 <body dir="rtl">
   <!-- component -->
-  <form method="POST" action="{{ route("store") }}" class="min-h-screen p-6 bg-gray-100 flex flex-col items-center justify-center">
+  <form method="POST" action="{{ route("order.store") }}" class="min-h-screen p-6 bg-gray-100 flex flex-col items-center justify-center">
     @csrf
     <a href="{{ route("home") }}" class="md:absolute top-0 right-0 p-5 float-right">
       <img src="{{ asset('moy.jpeg') }}" alt="Moy Logo"
@@ -91,7 +91,7 @@
                   <div class="inline-flex items-end">
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">ارسال
                       الطلب</button>
-                      <a href="{{ route("search") }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">الاستعلام عن
+                      <a href="{{ route("order.search") }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">الاستعلام عن
                         الطلب</a>
                   </div>
                 </div>
