@@ -29,22 +29,20 @@
               <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-1">
                 
                 <div class="md:col-span-2">
-                    <h1 class="font-medium text-lg">رقمك هو</h1>
+                    <h1 class="font-medium text-lg">عدد التنكات المطلوب</h1>
                 </div>
 
                 <div class="md:col-span-2">
-                    <h1 class="font-bold text-2xl">{{ $order->id }}</h1>
+                    <h1 class="font-bold text-2xl">{{ $order->amount }}</h1>
                 </div>
 
                 <div class="md:col-span-2">
-                    <h1 class="font-medium text-lg">تبقى لدورك</h1>
+                    <h1 class="font-medium text-lg">مكان الانتاج</h1>
                 </div>
 
                 <div class="md:col-span-2">
                     <h1 class="font-bold text-2xl">
-                        @php
-                            echo App\Models\Order::where('id', "<", $order->id)->where("completed", false)->count() . " طلبات";
-                        @endphp
+                        {{ $order->location }}
                     </h1>
                 </div>
 

@@ -92,8 +92,6 @@
                   <div class="inline-flex items-end">
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">ارسال
                       الطلب</button>
-                      <a href="{{ route("oil.search") }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">الاستعلام عن
-                        الطلب</a>
                   </div>
                 </div>
 
