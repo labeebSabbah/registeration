@@ -7,6 +7,8 @@ use Illuminate\Foundation\Http\FormRequest;
 use App\Rules\AmountRule;
 use App\Rules\PhoneRule;
 
+use Illuminate\Validation\Rule;
+
 class StoreOilRequest extends FormRequest
 {
     /**
@@ -36,7 +38,10 @@ class StoreOilRequest extends FormRequest
                 'required',
                 new AmountRule(),
             ],
-            "location" => "required|string",
+            "location" => [
+                "required",
+                Rule::in(config('oil'))
+            ]
         ];
     }
 }

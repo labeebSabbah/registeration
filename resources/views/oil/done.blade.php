@@ -122,7 +122,7 @@
                                 <th data-priority="1">#</th>
                                 <th data-priority="2">الاسم</th>
                                 <th data-priority="3">عدد التنكات المطلوب</th>
-                                <th data-priority="4">مكان التصنيع</th>
+                                <th data-priority="4">مكان الانتاج</th>
                                 <th data-priority="5">الرقم التسلسلي</th>
                                 <th data-priority="6">تاريخ الطلب</th>
                                 <th data-priority="7">رقم الهاتف</th>

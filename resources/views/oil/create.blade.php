@@ -62,20 +62,21 @@
                 </div>
 
                 <div class="md:col-span-2">
-                  <label for="amount">عدد التنكات</label>
+                  <label for="amount">عدد التنكات المطلوب</label>
                   <input type="text" name="amount" id="amount" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
                     value="" />
                     @error('amount')
                       @foreach ($errors->get('amount') as $message)
-                        <div class="text-red-500">{{ $message }}</div>
+                          <div class="text-red-500">{{ $message }}</div>
                       @endforeach
                       @enderror
                 </div>
 
                 <div class="md:col-span-3">
-                  <label for="location">مكان التصنيع</label>
+                  <label for="location">مكان الانتاج</label>
                   <select name="location" id="location"
                     class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
+                    <option selected>اختر مكان الانتاج</option>
                     @foreach (config('oil') as $value)
                     <option value="{{ $value }}">{{ $value }}</option>
                     @endforeach
